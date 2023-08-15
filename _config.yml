@@ -14,9 +14,9 @@ menu_icons:
   enable: true  # 是否启用导航菜单图标
   home: icon-home-fill
   archives: icon-archives-fill
-  categories: icon-folder
-  tags: icon-tags
-  repository: icon-project
+  #categories: icon-folder
+  #tags: icon-tags
+  #repository: icon-project
   # books: icon-book-fill
   links: icon-friendship
   about: icon-cup-fill
@@ -101,7 +101,7 @@ donate:
 # Share
 # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
 share:
-  enable: true  # 是否启用分享
+  enable: flase  # 是否启用分享
   sites: weibo,qq,wechat,facebook,twitter  # PC端显示的分享图标
   mobile_sites: weibo,qq,qzone  # 移动端显示的分享图标
 
@@ -211,10 +211,10 @@ profile:
   social:
     links:
       github: https://github.com/cofess
-      weibo: http://weibo.com/cofess
-      twitter: https://twitter.com/iwebued
-      # facebook: /
-      # dribbble: /
+      #weibo:
+      #twitter:
+      # facebook: 
+      # dribbble: 
       behance: https://www.behance.net/cofess
       rss: atom.xml
     link_tooltip: true # enable the social link tooltip, options: true, false
@@ -229,11 +229,11 @@ profile:
     平面设计: ★★★☆☆
   # My Personal Links
   links:
-    Github: https://github.com/cofess
-    Blog: http://blog.cofess.com
-    微博: http://weibo.com/cofess
-    花瓣: http://huaban.com/cofess
-    Behance: https://www.behance.net/cofess
+    GitHub: https://github.com/cofess
+    #Blog: 
+    #微博: 
+    #花瓣: 
+    #Behance: 
   # My Personal Labels
   labels:
     - 前端
