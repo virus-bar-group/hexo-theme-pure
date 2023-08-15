@@ -455,32 +455,32 @@ h6 .small,
 
 h1,
 .h1 {
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 h2,
 .h2 {
-  font-size: 26px;
+  font-size: 1.8rem;
 }
 
 h3,
 .h3 {
-  font-size: 22px;
+  font-size: 1.6rem;
 }
 
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 1.4rem;
 }
 
 h5,
 .h5 {
-  font-size: 14px;
+  font-size: 1.2rem;
 }
 
 h6,
 .h6 {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 p {
@@ -6478,19 +6478,24 @@ body.no-sidebar .sidebar {
 .marked-body h6 {
   margin-top: 24px;
   margin-bottom: 16px;
-  font-weight: 600;
   line-height: 1.25;
+}
+
+.marked-body h1,
+.marked-body h2,
+.marked-body h3,
+.marked-body h4,
+.marked-body h5 {
+  font-weight: 600;
 }
 
 .marked-body h1 {
   padding-bottom: 0.3em;
-  font-size: 2em;
   border-bottom: 1px solid #f2f2f2;
 }
 
 .marked-body h2 {
   padding-bottom: 0.3em;
-  font-size: 1.5em;
   border-bottom: 1px solid #f2f2f2;
 }
 
