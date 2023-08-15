@@ -1,8 +1,8 @@
 <% if (post.source_text || post.source_link || post.source_author_text || post.source_author_link){ %>
-    <span>
+    <div>
         <% if (post.source_text || post.source_link){ %>
             <i class="icon icon-map-marker"></i>
-            原文出处
+            原文出处 -
             <% if (post.source_text && !post.source_link){ %>
                 <!-- text only -->
                 <%- post.source_text %>
@@ -14,11 +14,11 @@
                 <a href="<%- post.source_link %>"><%- post.source_text %></a>
             <% } %>
         <% } %>
-    </span>
-    <span>
+    </div>
+    <div>
         <% if (post.source_author_text || post.source_author_link){ %>
             <i class="icon icon-users"></i>
-            原文作者
+            原文作者 -
             <% if (post.source_author_text && !post.source_author_link){ %>
                 <%- post.source_author_text %>
             <% } else if (!post.source_author_text && post.source_author_link){ %>
@@ -27,5 +27,5 @@
                 <a href="<%- post.source_author_link %>"><%- post.source_author_text %></a>
             <% } %>
         <% } %>
-    </span>
+    </div>
 <% } %>
