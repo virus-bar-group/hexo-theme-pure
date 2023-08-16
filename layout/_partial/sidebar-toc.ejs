@@ -1,8 +1,13 @@
-<% if (!index && theme.config.toc) { %>
+<% if (!index && theme.config.toc && toc(post.content)) { %>
   <aside class="sidebar sidebar-toc collapse <% if(theme.config.autoUnfold){%>  in  <%}%>" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
   <div class="slimContent">
     <nav id="toc" class="article-toc">
-      <h3 class="toc-title"><%= __('article.catalogue') %></h3>
+      <div style="display: flex; align-items: baseline; flex-wrap: nowrap;">
+        <h3 class="toc-title" style="flex-grow: 1;"><%= __('article.catalogue') %></h3>
+        <span data-toggle="collapse" href="#collapseToc" title="关闭目录" style="cursor: pointer;">
+          <i class="icon icon-close"></i>
+        </span>
+      </div>
       <%- toc(post.content, {list_number: false}) %>
     </nav>
   </div>
