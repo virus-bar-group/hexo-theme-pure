@@ -7,6 +7,10 @@
   meta = meta.split(',').filter(function(item) {
     return GUEST.indexOf(item) > -1;
   });
+  var requiredFields = '<%= theme.comment.valine.required_fields %>';
+  requiredFields = requiredFields.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
   new Valine({
     el: '#vcomments',
     verify: <%= theme.comment.valine.verify %>,
@@ -16,8 +20,10 @@
     placeholder: '<%= theme.comment.valine.placeholder %>',
     avatar: '<%= theme.comment.valine.avatar %>',
     meta: meta,
+    requiredFields: requiredFields,
     pageSize: '<%= theme.comment.valine.pageSize %>' || 10,
-    visitor: <%= theme.comment.valine.visitor %>
+    visitor: <%= theme.comment.valine.visitor %>,
+    enableQQ: <%= theme.comment.valine.enable_qq %>
   });
   </script>
 <% } %>
