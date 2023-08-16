@@ -7105,6 +7105,10 @@ body.okayNav-loaded {
   content: ')';
 }
 
+.ins-search-item {
+  display: block;
+}
+
 .ins-section .ins-search-item header,
 .ins-section .ins-search-item .ins-search-preview {
   overflow: hidden;
@@ -7126,7 +7130,7 @@ body.okayNav-loaded {
 .ins-section .ins-search-item:hover,
 .ins-section .ins-search-item.active {
   color: #fff;
-  background: #006bde;
+  background: linear-gradient(175deg, #006fe6, #004a99);
 }
 
 .ins-section .ins-search-item:hover .ins-slug,

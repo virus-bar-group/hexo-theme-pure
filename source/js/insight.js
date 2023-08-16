@@ -16,11 +16,11 @@
     }
 
     function searchItem (icon, title, slug, preview, url) {
-        return $('<div>').addClass('ins-selectable').addClass('ins-search-item')
+        return $('<a>').addClass('ins-selectable').addClass('ins-search-item')
             .append($('<header>').append($('<i>').addClass('icon').addClass('icon-' + icon)).append(title != null && title != '' ? title : CONFIG.TRANSLATION['UNTITLED'])
                 .append(slug ? $('<span>').addClass('ins-slug').text(slug) : null))
             .append(preview ? $('<p>').addClass('ins-search-preview').text(preview) : null)
-            .attr('data-url', url);
+            .attr('href', url).attr('target', '_self')
     }
 
     function sectionFactory (type, array) {
@@ -207,7 +207,7 @@
 
     function gotoLink ($item) {
         if ($item && $item.length) {
-            location.href = $item.attr('data-url');
+            location.href = $item.attr('href');
         }
     }
 
@@ -226,8 +226,6 @@
     $(document).on('click focus', '.search-form-input', function () {
         $main.addClass('show');
         $main.find('.ins-search-input').focus();
-    }).on('click', '.ins-search-item', function () {
-        gotoLink($(this));
     }).on('click', '.ins-close', function () {
         $main.removeClass('show');
     }).on('keydown', function (e) {
