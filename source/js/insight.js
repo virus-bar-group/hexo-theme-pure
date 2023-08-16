@@ -33,7 +33,13 @@
             case 'PAGES':
                 $searchItems = array.map(function (item) {
                     // Use config.root instead of permalink to fix url issue
-                    return searchItem('file', item.title, null, item.text.slice(0, 150), CONFIG.ROOT_URL + item.path);
+                    let joinedUrl = CONFIG.ROOT_URL + item.path  // fallback value
+                    if (CONFIG.ROOT_URL.endsWith('/')) {
+                        joinedUrl = item.path.startsWith('/') ? CONFIG.ROOT_URL + item.path.replace('/', '') : CONFIG.ROOT_URL + item.path
+                    } else {
+                        joinedUrl = item.path.startsWith('/') ? CONFIG.ROOT_URL + item.path : CONFIG.ROOT_URL + item.path.replace('/', '')
+                    }
+                    return searchItem('file', item.title, null, item.text.slice(0, 150), joinedUrl);
                 });
                 break;
             case 'CATEGORIES':
