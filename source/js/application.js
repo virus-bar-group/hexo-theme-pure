@@ -21,6 +21,14 @@ $(function() {
     }
   });
 
+  // if device >= sm, expand the toc automatically
+  // sm: 768px, https://getbootstrap.com/docs/3.4/css/#grid-options
+  if (window.matchMedia('(min-width: 768px)').matches) {
+    $('#collapseToc').collapse('show')
+  } else {
+    $('a.toggle-btn[href="#collapseToc"]')[0].classList.add('collapsed')
+  }
+
   // geopattern 背景生成
   $(".geopattern").each(function() {
     $(this).geopattern($(this).data('pattern-id'));

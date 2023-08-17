@@ -14,7 +14,7 @@
     <% } %>
     <% if (!index && theme.config.toc && toc(post.content)) { %>
     <li class="toggle-toc">
-      <a class="toggle-btn <% if(!theme.config.autoUnfold){%>  collapsed  <%}%>" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="<%= __('article.catalogue') %>" role="button">
+      <a class="toggle-btn" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="<%= __('article.catalogue') %>" role="button">
         <span style="display: inline;">[&nbsp;<%= __('article.catalogue') %></span>
         <i class="text-collapsed icon icon-anchor"></i>
         <i class="text-in icon icon-close"></i>

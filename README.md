@@ -6,7 +6,11 @@ A brand new default theme for [[Hexo](https://hexo.io)].  [Preview](http://cofes
 
 ## Forked Version
 
-该仓库由 [cofess/hexo-theme-pure](https://github.com/cofess/hexo-theme-pure) 复刻而来。增加了以下功能：
+该仓库由 [cofess/hexo-theme-pure](https://github.com/cofess/hexo-theme-pure) 复刻而来，作出了以下修改：
+
+### 目录自动展开
+
+`theme.config.autoUnfold` 已被弃用，不再用于控制是否默认展开目录。在 [application.js](./source/js/application.js) 中添加了一层判断，若页面宽度大于 Bootstrap 定义的 `sm` 设备宽度，则自动展开目录。
 
 ### 注明转载出处
 
