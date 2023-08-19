@@ -484,7 +484,7 @@ h6,
 }
 
 p {
-  margin: 0 0 10.5px;
+  margin: 1em 0;
 }
 
 .lead {
@@ -6468,6 +6468,10 @@ body.no-sidebar .sidebar {
   right: 0;
   top: 0;
   padding: 14px 0;
+}
+
+.marked-body img {
+  margin-bottom: 10px;
 }
 
 .marked-body h1,
