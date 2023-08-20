@@ -718,6 +718,12 @@ blockquote {
   background-color: #fbfbfb;
 }
 
+blockquote p:first-child,
+blockquote ul:first-child,
+blockquote ol:first-child {
+  margin-top: 0;
+}
+
 blockquote p:last-child,
 blockquote ul:last-child,
 blockquote ol:last-child {
